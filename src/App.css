@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* General styling for the page */
+body {
+  font-family: 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #000; 
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  width: 80%;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Styling for the heading */
+.page-header {
+  color: #2d3e50;
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top: 60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Styling for the KendoReact Grid */
+.k-grid {
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Styling for the KendoReact Grid headers */
+.k-grid th {
+  background-color: rgb(217, 240, 255);
+  color: #0a0a0a;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+  font-size: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Styling for the KendoReact Grid rows */
+.k-grid td,
+.k-grid th {
+  border: 0 solid #ffffff;
+  padding: 0px;
+  height: 1px;
+}
+
+/* Hover effect for KendoReact Grid rows */
+.k-grid tbody tr:hover {
+  background-color: #ffffff;
+}
+
+/* Styling for the icon buttons */
+.icon-button {
+  background-color: white;
+  border: none ;
+  padding: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+/* Styling for the refresh icon button */
+.refresh-button {
+  background-color: rgb(217, 240, 255);
+  border: 0;
+  cursor: pointer;
+}
+
+/* Styling for the icon images */
+.icon {
+  width: 20px;
+  height: 20px;
 }
