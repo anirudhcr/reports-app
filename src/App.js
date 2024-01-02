@@ -31,40 +31,41 @@ const columns = [
 
 const KendoReactTable = () => {
   return (
-    <Grid
-      style={{ height: '400px'}}
-      data={reports}
-      resizable={true}
-      pageable={true}
-      sortable={true}
-      pagerStyle={{ background: 'transparent', padding: '10px' }}
-      
-    >
-      {columns.map(column => (
-        <Column key={column.field} field={column.field} title={column.title} headerCell={column.headerCell}/>
-      ))} 
-      <Column title="Actions" cell={CommandCell} />
-    </Grid>
+    <div data-testid="kendo-react-table">
+      <Grid
+        style={{ height: '400px'}}
+        data={reports}
+        resizable={true}
+        pageable={true}
+        sortable={true}
+        pagerStyle={{ background: 'transparent', padding: '10px' }}
+      >
+        {columns.map(column => (
+          <Column key={column.field} field={column.field} title={column.title} headerCell={column.headerCell}/>
+        ))} 
+        <Column title="Actions" cell={CommandCell} />
+      </Grid>
+    </div>    
   );
 };
 
 
 const CommandCell = (props) => (
   <td>
-    <button className="icon-button" onClick={() => console.log(`Edit clicked for report ${props.dataItem.id}`)}>
+    <button data-testid={`edit-icon-row-${props.dataItem.id}`} className="icon-button" onClick={() => console.log(`Edit clicked for report ${props.dataItem.id}`)}>
       <img src={editIcon} alt="Edit" className="icon" />
     </button>
-    <button className="icon-button" onClick={() => console.log(`Delete clicked for report ${props.dataItem.id}`)}>
+    <button data-testid={`delete-icon-row-${props.dataItem.id}`} className="icon-button" onClick={() => console.log(`Delete clicked for report ${props.dataItem.id}`)}>
       <img src={deleteIcon} alt="Delete" className="icon" />
     </button>
-    <button className="icon-button" onClick={() => console.log(`Export clicked for report ${props.dataItem.id}`)}>
+    <button data-testid={`download-icon-row-${props.dataItem.id}`} className="icon-button" onClick={() => console.log(`Export clicked for report ${props.dataItem.id}`)}>
       <img src={downloadIcon} alt="Export" className="icon" />
     </button>
   </td>
 );
 
 const CustomHeader = (props) => (
-  <>
+  <th data-testid='report-id-header'>
     <tr>
       <th>
         <button className="refresh-button" onClick={() => console.log('Refresh clicked')}>
@@ -76,7 +77,7 @@ const CustomHeader = (props) => (
     <tr>
       <th>{props.title}</th>
     </tr>
-  </>
+  </th>
 );
 
 const ViewListOfReports = () => {
