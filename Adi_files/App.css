@@ -1,0 +1,77 @@
+/* App.css */
+
+/* General styling for the page */
+body {
+  font-family: 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #000; 
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+/* Styling for the heading */
+.page-header {
+  color: #2d3e50;
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top: 60px;
+}
+
+/* Styling for the KendoReact Grid */
+.k-grid {
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+/* Styling for the KendoReact Grid headers */
+.k-grid th {
+  background-color: rgb(217, 240, 255);
+  color: #0a0a0a;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Styling for the KendoReact Grid rows */
+.k-grid td,
+.k-grid th {
+  border: 0 solid #ffffff;
+  padding: 0px;
+  height: 1px;
+}
+
+/* Hover effect for KendoReact Grid rows */
+.k-grid tbody tr:hover {
+  background-color: #ffffff;
+}
+
+/* Styling for the icon buttons */
+.icon-button {
+  background-color: white;
+  border: none ;
+  padding: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+/* Styling for the refresh icon button */
+.refresh-button {
+  background-color: rgb(217, 240, 255);
+  border: 0;
+  cursor: pointer;
+}
+
+/* Styling for the icon images */
+.icon {
+  width: 20px;
+  height: 20px;
+}
